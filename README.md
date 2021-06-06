@@ -4,6 +4,8 @@ A simple template to convert your notion page into a webpage.
 
 **This template can only convert a single page at once.**
 
+(Below are instructions, but my grammar sucks!. Sorry for my bad English)
+
 ## Setup
 
 ### Notion API
@@ -24,7 +26,7 @@ Next, copy the page id in the URL.
 
 Click the button below, and you'll see deploy settings on vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsasigume%2Fnext-to-notion-single-page)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsasigume%2Fnotion-to-next-single-page)
 
 Edit the environment variables on the deploy screen.
 
