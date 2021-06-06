@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+      'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji',
+      'Segoe UI Symbol';
+    color: rgb(55, 53, 47);
+    white-space: pre-wrap;
+  }
+}
+
+/* Styles below are copied from actual Notion webapp,
+but I modified a lot because Notion doesn't use any semantic tags like "h2" or "ul".
+*/
+
+a,
+a:visited {
+  transition: border-color 100ms ease-in, opacity 100ms ease-in;
+  border-bottom: 0.05em solid;
+  border-color: rgba(55, 53, 47, 0.4);
+  opacity: 0.7;
+  caret-color: rgb(55, 53, 47);
+}
+a:hover {
+  border-color: currentColor !important;
+  opacity: 1 !important;
+}
+
+article {
+  flex-shrink: 0;
+  flex-grow: 1;
+  width: 900px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+article p {
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: rgb(55, 53, 47);
+  margin: 1px 0;
+  padding: 3px 2px;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1px;
+}
+article h1 {
+  font-size: 1.875em;
+}
+
+article h2 {
+  font-size: 1.5em;
+  margin-top: 1.4em;
+}
+
+article h3 {
+  font-size: 1.25em;
+  margin-top: 1em;
+}
+
+/* I added h4 but seems like Notion has no h4 tag...? */
+article h4 {
+  font-size: 1.1em;
+  margin-top: 0.8em;
+}
+
+/* todo */
+article ul.rnr-to_do li {
+  margin: 0.5em 0;
+}
+article ul.rnr-to_do li input {
+  /* This should be replaced with svg square */
+  width: 1em;
+  margin-right: 0.5em;
+  transform: scale(1.5);
+}
+article ul.rnr-to_do {
+  list-style-type: none;
+}
