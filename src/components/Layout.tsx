@@ -1,22 +1,24 @@
 import Head from 'next/head';
 import { render } from '@9gustin/react-notion-render';
+import { LayoutProps } from 'models';
 
-import { PageProps } from '../models/page-props';
-
-const Layout = ({ children, notionPage }: PageProps) => (
-  <div className="container mx-auto py-16 max-w-xl">
+const Layout = ({ notionPage }: LayoutProps) => (
+  <div className="container mx-auto max-w-xl flex flex-col gap-4">
     <Head>
-      <title>Page title</title>
+      <title>{(notionPage && notionPage.title) ?? 'No title'}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header className="text-lg">{'sasigu.me'}</header>
-    <main area-label="Main content" className="py-8 px-3">
-      {children}
-      <article>{notionPage && render(notionPage.results, true)}</article>
+    <main area-label="Main content" className="px-3">
+      <article>
+        <h1 className="text-4xl font-bold mt-12">
+          {(notionPage && notionPage.title) ?? 'No title'}
+        </h1>
+        {notionPage && render(notionPage.blocks.results, true)}
+      </article>
     </main>
     <footer area-label="Footer">
-      <span>Made with 🍙 by Ryo Ando</span>
+      <span>Made with Notion</span>
     </footer>
   </div>
 );
