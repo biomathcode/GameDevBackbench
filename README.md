@@ -16,6 +16,8 @@ Create new integration on the link above. Don't forget to copy the token.
 
 Then head to the page you want to convert. Click share and select the integration you created.
 
+**WARNING! If your page is nested, please invite integration for the parent page, not the child page!** Otherwise, the page data cannot be fetched!
+
 ```
 https://www.notion.so/XXXXX/PAGE_TITLE-YOUR_PAGE_ID_HERE
 ```
